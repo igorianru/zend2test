@@ -1,0 +1,15 @@
+ <table class="table">
+ <tr>
+     <th>Rate</th>
+     <th>Name</th>
+     <th>Date Update</th>
+ </tr>
+ <?php foreach ($rates as $album) : ?>
+
+ <tr>
+     <td><?php echo $this->escapeHtml($album->rate);?></td>
+     <td><?php echo $this->escapeHtml($album->rates_from);?> to <?php echo $this->escapeHtml($album->rates_to);?></td>
+     <td><?php echo $this->escapeHtml($album->updated_at);?></td>
+ </tr>
+ <?php endforeach; ?>
+ </table>
